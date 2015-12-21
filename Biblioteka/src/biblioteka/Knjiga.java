@@ -9,14 +9,14 @@ public class Knjiga {
 	private int izdavanje;
 	private LinkedList<Author> autori = new LinkedList();
 
+	public Knjiga() {
+	}
+
 	public Knjiga(String naslov, long iSBN, String izdavac, int izdavanje) {
 		this.naslov = naslov;
 		ISBN = iSBN;
 		this.izdavac = izdavac;
 		this.izdavanje = izdavanje;
-	}
-
-	public Knjiga() {
 	}
 
 	public String getNaslov() {
@@ -55,6 +55,14 @@ public class Knjiga {
 	public String toString() {
 		return "Knjiga [naslov=" + naslov + ", ISBN=" + ISBN + ", izdavac=" + izdavac + ", izdavanje=" + izdavanje
 				+ "]";
+	}
+
+	public LinkedList<Author> getAutori() {
+		return autori;
+	}
+
+	public void setAutori(LinkedList<Author> autori) {
+		this.autori = autori;
 	}
 
 }
